@@ -1,0 +1,193 @@
+<b>Memoria de decisiones de diseño · Laboratorio 9 · Visualización estática</b>
+
+Universidad del Valle de Guatemala · Facultad de Ingeniería<br/>CC3084 – Data Science · Semestre II, 2026<br/><b>Equipo:</b> Fernando Mendoza y Pablo Escobar<br/><b>Avance:</b> 15 de octubre de 2026 · <b>Infografía:</b> 18 de octubre de 2026
+
+
+1. Propósito, audiencia y mensaje
+
+
+La pieza responde a qué enseñan 17 años de datos migratorios sobre el turismo en Guatemala y cómo anticipar decisiones. La audiencia es la dirección de INGUAT: necesita distinguir capacidad operativa, prioridades comerciales y riesgo sin interpretar un informe estadístico extenso. La cobertura exacta es enero de 2009 a junio de 2026: 210 meses, equivalentes a 17 años y medio.
+
+El mensaje principal combina recuperación y prudencia: en 2025 hubo 3 352 289 ingresos de la población analizada, 38,0 % más que en 2019. Sin embargo, el intervalo nominal del 95 % del modelo ganador cubrió solo 29 de 63 meses de prueba. Por eso el titular une “El turismo supera 2019” con “la incertidumbre exige flexibilidad”.
+
+La unidad es el ingreso registrado, no el número de personas únicas, divisas ni gasto. No se infieren ingresos económicos a partir del flujo migratorio. Las recomendaciones son propuestas de gestión sustentadas en asociaciones observadas; no son efectos causales probados.
+
+
+2. Alcance y productos
+
+
+Se entrega una infografía estática, una memoria PDF, sus fuentes editables en Python, tablas CSV y evidencia de procedencia. La composición digital mide al menos 1200×2400 píxeles. El enunciado llama “A3” a 11×17 pulgadas: esas medidas no coinciden. Se incluyen un PDF A3 real (297×420 mm) y otro 11×17 pulgadas, ambos verticales y de una sola página, sin deformar el contenido.
+
+El repositorio conserva la historia de edición de código y contenido. La ejecución asistida por IA se declara: el equipo debe revisar y asumir las decisiones académicas. La autoría del equipo no sustituye los aportes individuales verificables exigidos por el curso.
+
+
+3. Fidelidad a los datos y al Laboratorio 1
+
+
+La fuente es Base_Migracion_2009-2026jun.xlsx, atribuida a INGUAT/IGM en el enunciado. Se verificó su SHA-256 contra los metadatos del Laboratorio 1: cdaba77918ae889c847ba8459503f9cce2441efac41b3d3aa0f05ac9ab283846. Los resultados se leen de un snapshot inmutable; no se reentrenan modelos para escoger cifras más favorables.
+
+El repositorio de origen es github.com/pablouwunya2021/lab1_DS, con HEAD 307da539939bf5b404109db90411c58f234ce842. Había modificaciones locales en métricas y pronósticos. El manifiesto docs/provenance.json registra ese estado y las huellas de los archivos efectivamente copiados; por tanto, no se afirma que todo el snapshot coincida con ese commit.
+
+<b>Comparabilidad histórica.</b> Se conserva la definición del Laboratorio 1: turistas y excursionistas no residentes de Guatemala durante todo el período. El cambio de registro de 2023 se explica junto a la línea temporal. Así se evita presentar una discontinuidad de medición como una caída de demanda. Los resultados ajustados no equivalen a los totales publicados originalmente.
+
+<b>Excepción marítima.</b> La serie incluye todas las categorías de viajeros para conservar cruceristas. Se marca con asterisco en la infografía. Solo se comparan indicadores relativos; sus niveles no se suman al total de población de referencia. El cambio de categorías desde 2017 limita la interpretación de la serie como un fenómeno perfectamente homogéneo.
+
+Cifra | Definición reproducible | Archivo de origen
+
+Ingresos 2025 | Suma de los 12 meses de total en 2025. | monthly_series.parquet
+
+Crecimiento / caída | 100 × (suma anual / suma 2019 − 1). No comparar 2026 parcial con años completos. | monthly_series.parquet
+
+Recuperación | Primer mes desde 2021 cuyo acumulado móvil de 12 meses alcanza la suma de 2019. | series_comparison.parquet
+
+Cuadrante | Máximo de cada indicador entre las siete series; valores originales sin recalcular. | series_comparison.parquet
+
+Modelos e intervalos | Métricas y límites originales de la prueba; MAE, RMSE y cobertura recalculados para verificar. | model_metrics.parquet / forecasts.parquet
+
+Los CSV completos se incluyen para revisión. No se transcriben números desde una imagen: el programa calcula los KPIs y lee las comparativas desde los artefactos. El redondeo ocurre únicamente al presentar las cifras.
+
+
+4. Orden visual y elección de gráficos
+
+
+Bloque | Decisión de diseño | Justificación
+
+Titular y KPIs | Titular periodístico y cuatro tarjetas: volumen 2025, variación vs. 2019, caída 2020 y mes de recuperación. | Primero establece magnitud, contraste y tiempo. La mayor tipografía se reserva para el mensaje y las cifras.
+
+Panorama histórico | Línea mensual continua; eje vertical desde cero; anotaciones de pandemia, recuperación y cambio metodológico. | El tiempo es ordenado y continuo: la posición y la pendiente permiten reconocer evolución y rupturas sin una leyenda distante.
+
+Estacionalidad | Barras por mes del promedio 2023–2025, normalizado a media 100. Diciembre usa el acento. | Compara categorías cíclicas por longitud sobre una base cero. Tres años completos evitan el sesgo de incluir solo medio 2026.
+
+Vías y mercados | Cuadrante textual con cuatro ganadores y su indicador. | Resume preguntas concretas sin mezclar unidades en un eje ni añadir un radar cuya geometría sugiera equivalencias falsas.
+
+Modelos y estimación | Tabla de MAE/RMSE para seis modelos del total; línea observada, línea discontinua estimada y banda del 95 %. | La tabla facilita comparación exacta en una unidad común. La banda hace visible incertidumbre y la línea permite contrastar con la prueba.
+
+Acción y fuentes | Cuatro recomendaciones numeradas; ficha técnica y créditos al final. | Cada propuesta sigue una evidencia ya vista. El pie deja visibles población, período, fuente y autores.
+
+La lectura avanza de arriba abajo y de izquierda a derecha dentro de cada franja: qué pasó, cuándo pasó, dónde y cuándo planificar, cuánto confiar y qué hacer. La proximidad agrupa textos con sus gráficos; la alineación y la repetición de encabezados crean continuidad. El espacio blanco separa ideas sin bordes decorativos.
+
+Se evitan gráficos 3D, pictogramas de área, ejes dobles y fondos saturados. No se usa un mapa porque las preguntas comparan series y desempeño, no distribución espacial precisa. Todas las barras y líneas de volumen parten de cero; las bandas no se recortan para hacer parecer más preciso el pronóstico.
+
+La estacionalidad reciente es una síntesis adicional, distinta de la fuerza estacional STL calculada sobre la historia completa. Las referencias a Semana Santa, vacaciones y fin de año son contexto de calendario; no se atribuye a bono 14 o aguinaldo un efecto sobre visitantes internacionales que el análisis no estimó.
+
+
+5. Paleta, jerarquía, legibilidad y teoría del color
+
+
+Color | Función | Razón
+
+#17324D · azul profundo | Titular y texto principal | Ancla sobria y de alta legibilidad; mantiene continuidad entre mensaje y explicación.
+
+#006D77 · verde azulado | Datos observados y encabezados | Familia fría próxima al azul: armonía por cercanía cromática; agrupa la evidencia histórica.
+
+#B34422 · terracota | Estimación, pico y advertencia | Contraste cálido-frío: atrae la atención a la proyección y al riesgo sin usar rojo/verde como único código.
+
+Blanco y grises neutros | Fondo, notas y guías | Reducen competencia visual y conservan contraste; no agregan categorías cromáticas.
+
+Se utilizan dos colores temáticos principales y un acento. La asociación del azul con sobriedad es una decisión editorial, no una propiedad psicológica universal. El acento se aplica con moderación y siempre acompañado por palabras o estilo de línea. El área de incertidumbre usa transparencia del mismo acento, sin una categoría cromática nueva.
+
+La tipografía DejaVu Sans permite incorporar caracteres españoles y se incrusta en los PDF. Los títulos, KPIs, subtítulos y notas tienen una jerarquía consistente. La pieza digital se exporta a 300 ppp, con texto vectorial en PDF; las anotaciones están junto a sus referentes y las series se identifican sobre el gráfico.
+
+Se adopta como referencia de legibilidad el umbral de contraste de 4,5:1 para texto normal de WCAG. El código comprueba los colores de texto contra blanco y las tarjetas claras. Esto verifica contraste, no una certificación completa de accesibilidad de una imagen rasterizada. Los CSV y esta memoria ofrecen un equivalente textual a las cifras principales.
+
+
+6. Definición de los indicadores comparativos
+
+
+<b>Estacionalidad:</b> fuerza STL = máx(0, 1 − Var(residuo) / Var(estacionalidad + residuo)); marítima obtiene 0,641. <b>Volatilidad:</b> desvío estándar residual dividido por la media de la serie, en porcentaje; marítima obtiene 56,30 %. Ambos describen patrones históricos, no certeza futura.
+
+<b>Pérdida pandémica:</b> diferencia relativa entre lo observado en marzo de 2020–diciembre de 2021 y el patrón mensual esperado con datos de enero de 2017–febrero de 2020. Marítima alcanza 95,55 %. Es un contrafactual descriptivo del laboratorio, no una estimación causal de todo el efecto de la pandemia.
+
+<b>Crecimiento:</b> Centroamérica encabeza el indicador heredado con 7,48 % anual. El código base ajusta una recta al logaritmo de la tendencia STL y excluye marzo de 2020–junio de 2021. Después reenumera los meses restantes con arange, comprimiendo el tiempo excluido. Se conserva el valor para fidelidad al laboratorio, pero no se interpreta como CAGR calendario exacto ni como proyección futura.
+
+
+7. Modelos, validación e incertidumbre
+
+
+El Laboratorio 1 entrenó sobre enero de 2009–marzo de 2021 y evaluó 63 meses, abril de 2021–junio de 2026 (división temporal 70/30). Se conserva esa partición, no el corte alternativo de julio de 2024 que también aparece en metadatos. El pronóstico mostrado corresponde al conjunto de prueba y está rotulado “Estimación”. No se inventa una predicción posterior a la cobertura disponible.
+
+Modelo · serie total | MAE | RMSE | MASE
+
+Prophet | 36 550 | 47 922 | 1,243
+
+SARIMA + intervención | 50 086 | 58 965 | 1,703
+
+Suavizamiento (estado) | 144 530 | 161 139 | 4,915
+
+Holt–Winters | 175 076 | 193 106 | 5,953
+
+Ingenuo estacional | 199 667 | 216 380 | 6,789
+
+SARIMA | 210 672 | 229 445 | 7,164
+
+MAE es el error absoluto medio; RMSE penaliza más los errores grandes. Ambas métricas están en ingresos por mes. MASE permite comparar error con la escala ingenua estacional calculada en entrenamiento. La regla original elige menor MASE con tolerancia del 2 % y desempate por parsimonia. En una misma serie el denominador de MASE es común: la clasificación coincide con MAE. Los errores en volumen no se comparan directamente entre mercados de distinto tamaño.
+
+AIC/BIC se conservan en el CSV completo, pero no ordenan esta tabla ejecutiva: no están disponibles para todos los modelos ni todas las familias comparten la misma verosimilitud. No se sustituyen los ausentes por ceros. La infografía incluye todas las familias evaluadas para el total, mientras las siete series y 42 evaluaciones permanecen en los anexos CSV.
+
+<b>La banda del 95 % no está calibrada en esta prueba.</b> Los límites provienen de Prophet con interval_width=0.95 en el código base. La cobertura empírica fue 46,03 % (29/63). Se muestra la banda original, sin ensancharla artificialmente ni ocultar las observaciones exteriores. Es un intervalo de predicción nominal, no un intervalo de confianza del promedio ni una garantía de cobertura.
+
+La selección de familia usa el propio conjunto de prueba; por ello su error no es una evaluación externa independiente del proceso de selección. Además, el diagnóstico de diferenciación del código base consulta la serie completa antes del ajuste. No se corrigen silenciosamente esas decisiones para este laboratorio de comunicación: se declaran como limitaciones y se recomienda validación temporal anidada o ventanas móviles antes de uso operativo.
+
+El MASE de Prophet para el total es 1,243: ser ganador entre estos candidatos no implica superar la escala del ingenuo estacional dentro de entrenamiento. Tampoco equivale a perder frente al ingenuo evaluado sobre esta prueba, que tiene MASE 6,789. La diferencia evita una lectura incorrecta del benchmark.
+
+
+8. Recomendaciones y condiciones de aplicación
+
+
+Evidencia | Acción propuesta / responsable sugerido | Seguimiento propuesto
+
+Diciembre: índice 132,6; media mensual = 100. | Operaciones: preparar turnos y coordinación con prestadores antes de diciembre; revisar cada mes. | Tiempo de atención y ocupación. Medir línea base antes del piloto.
+
+Centroamérica: mayor tendencia heredada (7,48 %). | Mercadeo: piloto regional con presupuesto acotado; ampliar solo si hay conversión medida. | Conversiones atribuibles al piloto y costo por conversión; no prometer retorno sin datos de gasto.
+
+Marítima: volatilidad 56,30 % y pérdida histórica 95,55 %. | Coordinación portuaria: turnos flexibles ligados a arribos confirmados, con revisión de calendario. | Utilización de turnos y cancelaciones. La pérdida pasada no es pronóstico de caída futura.
+
+Cobertura nominal 95 %; observada 46,0 %. | Analítica: reentrenar con información reciente, separar selección y evaluación, y recalibrar intervalos. | Cobertura y MAE fuera de muestra por ventana y horizonte; validar antes de comprometer capacidad fija.
+
+
+9. Control de calidad y reproducción
+
+
+Flujo en WSL: mise administra Python 3.12.14 y uv 0.12.11; uv.lock fija dependencias. Tras clonar, ejecutar mise trust, mise install, mise run setup, mise run build y mise run check. Los archivos de datos incluidos bastan para reproducir la visualización sin acceso a carpetas personales ni servicios externos.
+
+La verificación comprueba huellas de insumos, continuidad de 210 meses por serie, valores finitos y no negativos, reproducción de MAE/RMSE/cobertura, ganadores del cuadrante, tamaño PNG, páginas y dimensiones PDF, presencia de rótulos críticos y contraste. La revisión visual complementa estas pruebas: no se confunde pasar pruebas con garantizar una calificación.
+
+
+10. Colaboración y entrega
+
+
+Integrantes confirmados: Fernando Mendoza y Pablo Escobar. El historial registra cambios reales. No se crean commits atribuidos a Pablo por acciones que no realizó. docs/colaboracion.txt define una contribución sustantiva pendiente para él: revisar las limitaciones estadísticas, corregir texto y anotaciones, y confirmar esos cambios con su propia identidad. Ambos deben contribuir a la explicación y a la infografía.
+
+El curso exige inscripción en grupo de Canvas, entrega del avance el 15 de octubre y acceso del profesor y auxiliares al historial. El repositorio privado requiere invitaciones: sus usuarios aún no se han proporcionado. Estos pasos administrativos siguen pendientes y no pueden acreditarse mediante generación automática de documentos. La fecha del archivo no demuestra entrega puntual en Canvas.
+
+
+11. Matriz de verificación de la rúbrica
+
+
+Criterio | Evidencia entregada | Validación / límite
+
+Documento · 45 puntos | Secciones 1–8: coherencia, orden, paleta, elección de gráficos, alcance e interpretación. | Explicación explícita vinculada a cada componente visible. Sin acceso al material de clase, se aplican principios estándar; contrastar terminología con apuntes.
+
+Infografía · 55 puntos | Titular y 4 KPIs; historia anotada; estacionalidad; 4 comparativas; 6 modelos; intervalo; 4 recomendaciones; fuente y autores. | Cifras derivadas o conservadas del Laboratorio 1, con límites metodológicos visibles.
+
+HD y una página | PNG a 300 ppp; PDF A3 y PDF 11×17. | Validación automática de dimensiones y número de páginas; revisión visual.
+
+Fuentes y código | Snapshot con SHA-256, CSV completos, Python, uv.lock, mise.toml. | Ejecución reproducible y manifiesto con estado local del origen.
+
+Historia colaborativa | Repositorio con código y texto versionados; tarea real preparada para Pablo. | Pendiente aporte efectivo de Pablo; no se declara completado.
+
+Acceso y puntualidad | Enlaces y guía de entrega en README. | Pendientes acceso docente, grupo y carga en Canvas por los integrantes.
+
+
+12. Referencias
+
+
+Universidad del Valle de Guatemala. (2026). <i>Laboratorio 9. Visualización Estática</i>, CC3084. Enunciado de tres páginas, copia local en references/enunciado.pdf.
+
+INGUAT/IGM. <i>Base de Migración 2009–2026jun</i>. Archivo académico proporcionado para el curso. La atribución proviene del enunciado; no se presenta como una descarga pública verificada.
+
+Mendoza, F., y Escobar, P. (2026). <i>Laboratorio 1 — Series de tiempo</i>. Repositorio y snapshot identificados en la sección 3. Se conservan código metodológico, decisiones de población y resultados originales para auditoría.
+
+Hyndman, R. J., y Athanasopoulos, G. (2021). <i>Forecasting: Principles and Practice</i>, 3.ª ed. OTexts. Evaluación de pronósticos e intervalos: https://otexts.com/fpp3/accuracy.html y https://otexts.com/fpp3/prediction-intervals.html. Consulta: 15 de octubre de 2026.
+
+W3C. <i>Understanding Success Criterion 1.4.3: Contrast (Minimum)</i>. https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html. Referencia para el contraste de texto, no certificación integral de accesibilidad. Consulta: 15 de octubre de 2026.

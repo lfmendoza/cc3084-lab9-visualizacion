@@ -1,0 +1,235 @@
+{
+  "generated_at": "2026-07-27T05:19:50+00:00",
+  "series": {
+    "total": {
+      "winning_model": "prophet",
+      "order": [
+        0,
+        1,
+        0
+      ],
+      "seasonal_order": [
+        1,
+        1,
+        1,
+        12
+      ],
+      "test_cutoff": "2021-04-01",
+      "horizon": 63,
+      "mean_absolute_scaled_error": 1.2428179871245446,
+      "mean_absolute_percentage_error": 32.40272193489046,
+      "residuals_without_autocorrelation": true
+    },
+    "air_entry": {
+      "winning_model": "prophet",
+      "order": [
+        2,
+        1,
+        2
+      ],
+      "seasonal_order": [
+        0,
+        1,
+        1,
+        12
+      ],
+      "test_cutoff": "2021-04-01",
+      "horizon": 63,
+      "mean_absolute_scaled_error": 1.2113109975379275,
+      "mean_absolute_percentage_error": 17.6439930903467,
+      "residuals_without_autocorrelation": false
+    },
+    "land_entry": {
+      "winning_model": "sarima_with_intervention",
+      "order": [
+        0,
+        1,
+        0
+      ],
+      "seasonal_order": [
+        1,
+        1,
+        1,
+        12
+      ],
+      "test_cutoff": "2021-04-01",
+      "horizon": 63,
+      "mean_absolute_scaled_error": 1.2115788582774831,
+      "mean_absolute_percentage_error": 44.24138275309451,
+      "residuals_without_autocorrelation": false
+    },
+    "sea_entry": {
+      "winning_model": "seasonal_naive",
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seasonal_order": [
+        1,
+        1,
+        1,
+        12
+      ],
+      "test_cutoff": "2021-04-01",
+      "horizon": 63,
+      "mean_absolute_scaled_error": 0.2205309021388769,
+      "mean_absolute_percentage_error": 100.0,
+      "residuals_without_autocorrelation": false
+    },
+    "central_america": {
+      "winning_model": "sarima_with_intervention",
+      "order": [
+        0,
+        1,
+        0
+      ],
+      "seasonal_order": [
+        1,
+        1,
+        0,
+        12
+      ],
+      "test_cutoff": "2021-04-01",
+      "horizon": 63,
+      "mean_absolute_scaled_error": 1.293446216446129,
+      "mean_absolute_percentage_error": 43.50883361023371,
+      "residuals_without_autocorrelation": false
+    },
+    "north_america": {
+      "winning_model": "prophet",
+      "order": [
+        2,
+        1,
+        2
+      ],
+      "seasonal_order": [
+        0,
+        1,
+        1,
+        12
+      ],
+      "test_cutoff": "2021-04-01",
+      "horizon": 63,
+      "mean_absolute_scaled_error": 1.0382757704905814,
+      "mean_absolute_percentage_error": 17.302429561464297,
+      "residuals_without_autocorrelation": true
+    },
+    "europe": {
+      "winning_model": "prophet",
+      "order": [
+        2,
+        1,
+        0
+      ],
+      "seasonal_order": [
+        0,
+        1,
+        1,
+        12
+      ],
+      "test_cutoff": "2021-04-01",
+      "horizon": 63,
+      "mean_absolute_scaled_error": 1.1256091971916675,
+      "mean_absolute_percentage_error": 28.704182496953756,
+      "residuals_without_autocorrelation": false
+    }
+  },
+  "comparative_answers": [
+    {
+      "question": "strongest_seasonality",
+      "series": "sea_entry",
+      "observed_value": 0.6408521693399996,
+      "indicator_used": "seasonal_strength"
+    },
+    {
+      "question": "strongest_growth",
+      "series": "central_america",
+      "observed_value": 7.482001016970896,
+      "indicator_used": "trend_annual_growth"
+    },
+    {
+      "question": "highest_volatility",
+      "series": "sea_entry",
+      "observed_value": 56.296548581237126,
+      "indicator_used": "residual_dispersion"
+    },
+    {
+      "question": "hardest_hit_by_pandemic",
+      "series": "sea_entry",
+      "observed_value": 95.54648697721301,
+      "indicator_used": "pandemic_loss"
+    }
+  ],
+  "context": {
+    "source_digest": "cdaba77918ae889c847ba8459503f9cce2441efac41b3d3aa0f05ac9ab283846",
+    "coverage": {
+      "end": "2026-06-01",
+      "months": 210,
+      "start": "2009-01-01"
+    },
+    "population": "Visitantes internacionales no residentes",
+    "figures": {
+      "traveller_types_by_year": "reports/figures/figure_01_traveller_types_by_year.png",
+      "resident_share_by_year": "reports/figures/figure_02_resident_share_by_year.png",
+      "populations": "reports/figures/figure_03_populations.png",
+      "country_pareto": "reports/figures/figure_04_pareto.png",
+      "entry_mode_ranking": "reports/figures/figure_05_entry_mode_ranking.png",
+      "region_ranking": "reports/figures/figure_06_region_ranking.png",
+      "border_ranking": "reports/figures/figure_07_border_ranking.png",
+      "heatmap": "reports/figures/figure_08_heatmap.png",
+      "total_outliers": "reports/figures/figure_09_total_outliers.png",
+      "total_evolution": "reports/figures/figure_10_total_evolution.png",
+      "total_decomposition": "reports/figures/figure_11_total_decomposition.png",
+      "total_seasonality": "reports/figures/figure_12_total_seasonality.png",
+      "total_variance": "reports/figures/figure_13_total_variance.png",
+      "total_correlograms": "reports/figures/figure_14_total_correlograms.png",
+      "air_entry_evolution": "reports/figures/figure_15_air_entry_evolution.png",
+      "air_entry_decomposition": "reports/figures/figure_16_air_entry_decomposition.png",
+      "air_entry_seasonality": "reports/figures/figure_17_air_entry_seasonality.png",
+      "air_entry_variance": "reports/figures/figure_18_air_entry_variance.png",
+      "air_entry_correlograms": "reports/figures/figure_19_air_entry_correlograms.png",
+      "land_entry_evolution": "reports/figures/figure_20_land_entry_evolution.png",
+      "land_entry_decomposition": "reports/figures/figure_21_land_entry_decomposition.png",
+      "land_entry_seasonality": "reports/figures/figure_22_land_entry_seasonality.png",
+      "land_entry_variance": "reports/figures/figure_23_land_entry_variance.png",
+      "land_entry_correlograms": "reports/figures/figure_24_land_entry_correlograms.png",
+      "sea_entry_evolution": "reports/figures/figure_25_sea_entry_evolution.png",
+      "sea_entry_decomposition": "reports/figures/figure_26_sea_entry_decomposition.png",
+      "sea_entry_seasonality": "reports/figures/figure_27_sea_entry_seasonality.png",
+      "sea_entry_variance": "reports/figures/figure_28_sea_entry_variance.png",
+      "sea_entry_correlograms": "reports/figures/figure_29_sea_entry_correlograms.png",
+      "central_america_evolution": "reports/figures/figure_30_central_america_evolution.png",
+      "central_america_decomposition": "reports/figures/figure_31_central_america_decomposition.png",
+      "central_america_seasonality": "reports/figures/figure_32_central_america_seasonality.png",
+      "central_america_variance": "reports/figures/figure_33_central_america_variance.png",
+      "central_america_correlograms": "reports/figures/figure_34_central_america_correlograms.png",
+      "north_america_evolution": "reports/figures/figure_35_north_america_evolution.png",
+      "north_america_decomposition": "reports/figures/figure_36_north_america_decomposition.png",
+      "north_america_seasonality": "reports/figures/figure_37_north_america_seasonality.png",
+      "north_america_variance": "reports/figures/figure_38_north_america_variance.png",
+      "north_america_correlograms": "reports/figures/figure_39_north_america_correlograms.png",
+      "europe_evolution": "reports/figures/figure_40_europe_evolution.png",
+      "europe_decomposition": "reports/figures/figure_41_europe_decomposition.png",
+      "europe_seasonality": "reports/figures/figure_42_europe_seasonality.png",
+      "europe_variance": "reports/figures/figure_43_europe_variance.png",
+      "europe_correlograms": "reports/figures/figure_44_europe_correlograms.png",
+      "total_forecast": "reports/figures/figure_45_total_forecast.png",
+      "total_residuals": "reports/figures/figure_46_total_residuals.png",
+      "air_entry_forecast": "reports/figures/figure_47_air_entry_forecast.png",
+      "air_entry_residuals": "reports/figures/figure_48_air_entry_residuals.png",
+      "land_entry_forecast": "reports/figures/figure_49_land_entry_forecast.png",
+      "land_entry_residuals": "reports/figures/figure_50_land_entry_residuals.png",
+      "sea_entry_forecast": "reports/figures/figure_51_sea_entry_forecast.png",
+      "sea_entry_residuals": "reports/figures/figure_52_sea_entry_residuals.png",
+      "central_america_forecast": "reports/figures/figure_53_central_america_forecast.png",
+      "central_america_residuals": "reports/figures/figure_54_central_america_residuals.png",
+      "north_america_forecast": "reports/figures/figure_55_north_america_forecast.png",
+      "north_america_residuals": "reports/figures/figure_56_north_america_residuals.png",
+      "europe_forecast": "reports/figures/figure_57_europe_forecast.png",
+      "europe_residuals": "reports/figures/figure_58_europe_residuals.png",
+      "metric_comparison": "reports/figures/figure_59_metric_comparison.png",
+      "comparative_scatter": "reports/figures/figure_60_comparative_scatter.png"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+[tools]
+python = "3.12.14"
+uv = "0.12.11"
+
+[tasks.setup]
+description = "Instalar dependencias bloqueadas"
+run = "uv sync --locked"
+
+[tasks.build]
+description = "Generar infografía, memoria PDF y tablas auditables"
+run = "uv run --locked python src/build.py"
+
+[tasks.check]
+description = "Verificar código, cifras, procedencia y formatos finales"
+run = ["uv run --locked ruff check src tests", "uv run --locked pytest -q"]

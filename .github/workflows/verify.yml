@@ -1,0 +1,24 @@
+name: Verify academic deliverables
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: '0.12.11'
+          enable-cache: true
+      - run: uv sync --locked
+      - run: uv run --locked python src/build.py
+      - run: uv run --locked ruff check src tests
+      - run: uv run --locked pytest -q
+      - uses: actions/upload-artifact@v4
+        with:
+          name: laboratorio-9-entregables
+          path: entregables/
+          retention-days: 14

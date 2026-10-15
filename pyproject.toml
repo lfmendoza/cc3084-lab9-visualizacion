@@ -1,0 +1,13 @@
+[project]
+name = "cc3084-lab9-visualizacion"
+version = "1.0.0"
+description = "Infografía estática y memoria de diseño trazables al Laboratorio 1"
+requires-python = ">=3.12,<3.13"
+dependencies = ["matplotlib>=3.9,<4", "pandas>=2.2,<4", "pyarrow>=17", "reportlab>=4.2,<5", "pillow>=10", "pypdf>=5", "pytest>=8", "ruff>=0.11"]
+[tool.uv]
+package = false
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+[tool.ruff]
+line-length = 110

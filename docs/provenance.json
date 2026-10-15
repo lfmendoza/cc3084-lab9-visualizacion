@@ -1,0 +1,24 @@
+{
+  "upstream_repository": "https://github.com/pablouwunya2021/lab1_DS",
+  "upstream_head": "307da539939bf5b404109db90411c58f234ce842",
+  "upstream_worktree_status": " M notebooks/02_informe_final.ipynb\n M reports/artifacts/forecasts.parquet\n M reports/artifacts/model_metrics.parquet\n M reports/artifacts/study_summary.json\n M reports/figures/figure_45_total_forecast.png\n M reports/figures/figure_47_air_entry_forecast.png\n M reports/figures/figure_55_north_america_forecast.png\n M reports/figures/figure_57_europe_forecast.png\n",
+  "snapshot_note": "Copia de resultados locales, incluidos cambios no confirmados; no se atribuyen íntegramente al commit upstream.",
+  "source_xlsx_sha256": "cdaba77918ae889c847ba8459503f9cce2441efac41b3d3aa0f05ac9ab283846",
+  "files": {
+    "data/lab1/forecasts.parquet": "4c0084eab66c2682c6cb340a00afda2fd32303a54a512e00e5840c2f30f964bd",
+    "data/lab1/metadata.json": "aca9f258fb3e43ceb71b7d1a0810fd7d6af866dd3fb2eb2c38aad9a518806c60",
+    "data/lab1/model_metrics.parquet": "776ac9b4948300c518de1d877b661e0637368bf8b3efeb38fd24b7c0d8689825",
+    "data/lab1/monthly_series.parquet": "ec73ecd699383dfc7c9d73574d37ce4284d50a9b927c74dc6ba13b02f7337b52",
+    "data/lab1/series_comparison.parquet": "c2d88ebf6764accda032987f6ff80e6011b8fde987f0997a24e2bed0c0ad25d8",
+    "data/lab1/series_diagnostics.parquet": "de20eaba77fec5a41fe52ca508165fc638ae443c720588740d0be0df1b139f47",
+    "data/lab1/study_summary.json": "5ae3a50b1927fd67904dce616b0cf8f0ffcf15be2c09bf48893bd1f9b18f70ba",
+    "references/enunciado.pdf": "53ce2f135159a0cb3b3236c6ba812a8a8caa3edeeb3ff3f28bb3317547f29133",
+    "references/lab1/0001-reference-population.md": "4aac06c8d4fc9853a56f77e781aae173854710bbb1bff3944efafaf995c025e7",
+    "references/lab1/0002-sea-series-on-total-reported.md": "59a9499d78e5fd370a0a06a79b93963b606a783598388d4554bfa2681dd6c65b",
+    "references/lab1/comparison.py": "3d19520ca3fce5eb2df04e3a4511af87f9f7dcae135c6e6c6a374a5ee600f9e6",
+    "references/lab1/metrics.py": "e4c96a2419cbde39a5fc17a95ae268579ec44ce235d7a3031b8315f743cea712",
+    "references/lab1/models.py": "9245927f5020cc33c409f5752efd2c2d6dfef0c541fa41638e0b7081c173a447",
+    "references/lab1/series.py": "0db8cf6a198ebb911af39d946a75fa6384fc881081af4cb3dab4d354de6dd628",
+    "references/lab1/study.py": "4fc58b9f8144e592e953ef77fbc39408e234b40d689439114e3079b7e70daa8d"
+  }
+}

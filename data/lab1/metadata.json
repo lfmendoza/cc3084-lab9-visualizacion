@@ -1,0 +1,45 @@
+{
+  "coverage": {
+    "end": "2026-06-01",
+    "months": 210,
+    "start": "2009-01-01"
+  },
+  "generated_at": "2026-07-27T05:01:02+00:00",
+  "libraries": {
+    "matplotlib": "3.11.1",
+    "numpy": "2.5.1",
+    "pandas": "3.0.5",
+    "pyarrow": "25.0.0",
+    "scipy": "1.18.0",
+    "statsmodels": "0.14.6"
+  },
+  "output_digests": {
+    "monthly_series.parquet": "ec73ecd699383dfc7c9d73574d37ce4284d50a9b927c74dc6ba13b02f7337b52",
+    "outliers.parquet": "a5ea3567d7836891ae167a5856db6a703f832c3b17eff10c9f4e3f5ecf16234e",
+    "partitions.parquet": "5df0ef70aa8d3a3c24d88e21a99492d0e137a71164f4048219bf0f02e80a25cc",
+    "visitor_facts.parquet": "61896c70dba7c1ae18b280ef5ff85151865c144260aed9aec6e58ac0a020a4e0"
+  },
+  "parameters": {
+    "holdout_start": "2024-07-01",
+    "strict_contract": true,
+    "train_share": 0.7
+  },
+  "pipeline_version": "1.0.0",
+  "python": "3.12.3",
+  "record_counts": {
+    "monthly_series.parquet": 1470,
+    "outliers.parquet": 318,
+    "partitions.parquet": 1470,
+    "visitor_facts.parquet": 161036
+  },
+  "series": [
+    "air_entry",
+    "central_america",
+    "europe",
+    "land_entry",
+    "north_america",
+    "sea_entry",
+    "total"
+  ],
+  "source_digest": "cdaba77918ae889c847ba8459503f9cce2441efac41b3d3aa0f05ac9ab283846"
+}
