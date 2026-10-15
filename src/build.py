@@ -305,7 +305,7 @@ def infographic(bundle):
     text(
         0.055,
         0.039,
-        "Fuente: Base de Migración 2009–jun 2026 · INGUAT/IGM, material académico; resultados del Laboratorio 1.\nPoblación: turistas y excursionistas no residentes (excepto marítima). Elaboración: Fernando Mendoza y Pablo Escobar.\nUVG · CC3084 · Laboratorio 9 · Octubre 2026. Cifras analíticas; no constituyen una publicación estadística oficial.",
+        "Fuente: Base de Migración 2009–jun 2026 · INGUAT/IGM, material académico; resultados del Laboratorio 1.\nPoblación: turistas y excursionistas no residentes (excepto marítima). Planteamiento conjunto: Fernando Mendoza y Pablo Escobar.\nUVG · CC3084 · Laboratorio 9 · Octubre 2026. Cifras analíticas; no constituyen una publicación estadística oficial.",
         8,
         GRAY,
     )
@@ -646,7 +646,7 @@ def explanation(bundle):
     )
     h("10. Colaboración y entrega")
     p(
-        "Integrantes confirmados: Fernando Mendoza y Pablo Escobar. El historial registra cambios reales. No se crean commits atribuidos a Pablo por acciones que no realizó. docs/colaboracion.txt define una contribución sustantiva pendiente para él: revisar las limitaciones estadísticas, corregir texto y anotaciones, y confirmar esos cambios con su propia identidad. Ambos deben contribuir a la explicación y a la infografía."
+        "Fernando Mendoza y Pablo Escobar plantearon conjuntamente los prompts de esta sesión para orientar la implementación del documento y la infografía, según la aclaración de Fernando. Se reconoce esa contribución intelectual compartida mediante créditos y coautoría Git. El alcance documentado es el planteamiento conjunto de instrucciones; no se atribuye a cada integrante programación manual ni revisiones individuales no acreditadas. docs/colaboracion.txt registra la contribución y las cuentas del equipo."
     )
     p(
         "El curso exige inscripción en grupo de Canvas, entrega del avance el 15 de octubre y acceso del profesor y auxiliares al historial. El repositorio privado requiere invitaciones: sus usuarios aún no se han proporcionado. Estos pasos administrativos siguen pendientes y no pueden acreditarse mediante generación automática de documentos. La fecha del archivo no demuestra entrega puntual en Canvas."
@@ -679,8 +679,8 @@ def explanation(bundle):
             ],
             [
                 "Historia colaborativa",
-                "Repositorio con código y texto versionados; tarea real preparada para Pablo.",
-                "Pendiente aporte efectivo de Pablo; no se declara completado.",
+                "Planteamiento conjunto de prompts para documento e infografía; créditos y coautoría Git del equipo.",
+                "Contribución declarada por Fernando en esta sesión. La evaluación de su alcance corresponde al docente.",
             ],
             [
                 "Acceso y puntualidad",

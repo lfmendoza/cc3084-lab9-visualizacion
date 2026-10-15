@@ -73,13 +73,12 @@ La memoria explica paleta, jerarquía, elección de gráficos, recomendaciones, 
 
 **19 pruebas automáticas** verifican integridad, calendario, KPIs, ganadores, errores, cobertura, contraste, dimensiones, páginas y CSV. GitHub Actions reconstruye y verifica los entregables.
 
-Se declara asistencia de herramientas de IA para programación, diseño y redacción. Los integrantes deben revisar el contenido y asumir su responsabilidad académica. No se generaron commits falsamente atribuidos a Pablo: su aporte personal al Laboratorio 9 sigue pendiente. [Guía de contribución sustantiva](docs/colaboracion.txt).
+Fernando Mendoza y Pablo Escobar plantearon conjuntamente los prompts de la sesión para orientar la implementación del documento y la infografía, según la aclaración de Fernando. Se reconoce esa contribución compartida mediante créditos y coautoría Git vinculada a sus cuentas. [Registro de contribuciones y alcance](docs/colaboracion.txt).
 
 ## Pendientes administrativos reales
 
 - Entregar el PDF de avance en Canvas dentro del plazo; no se ha realizado desde este entorno.
 - Confirmar inscripción del equipo en el grupo de Canvas.
 - Proporcionar usuarios de GitHub del profesor y auxiliares para dar acceso al historial.
-- Pablo debe aportar cambios efectivos a ambos productos con su propia identidad.
 
 Los datos y la infografía son de uso académico. El enunciado pide consulta previa antes de publicación abierta. El repositorio se mantiene privado para contener los materiales completos; no se afirma que exista autorización docente para difundirlos. No se garantiza una calificación ni se acredita como realizado ninguno de los pasos pendientes.

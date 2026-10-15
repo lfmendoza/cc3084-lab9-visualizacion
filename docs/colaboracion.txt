@@ -1,28 +1,32 @@
-COLABORACIÓN REAL Y TRAZABLE
+CONTRIBUCIONES DEL EQUIPO
 
-Equipo: Fernando Mendoza y Pablo Escobar (confirmado por Fernando).
-Código y contenidos desarrollados con asistencia de herramientas de IA. El equipo debe
-revisar y asumir la responsabilidad académica de la entrega.
+Equipo: Fernando Mendoza (@lfmendoza) y Pablo Escobar (@pablouwunya2021).
 
-Fernando: preparación del entorno, procedencia, generación y validación de
-entregables mediante asistencia de IA. Los commits se generan bajo la identidad
-configurada de Fernando, sin atribuciones ficticias a otros integrantes.
+Fernando aclaró en esta sesión que ambos plantearon conjuntamente los prompts
+para orientar la implementación del laboratorio. Esta aclaración sustituye la
+suposición anterior de que Pablo aún no había participado.
 
-Pablo: contribución pendiente. El repositorio base está alojado en su cuenta,
-pero eso no prueba autoría de commits ni contribución a este laboratorio.
-No se han creado commits con su nombre ni coautorías no verificadas.
+Contribución conjunta reconocida:
+- Planteamiento de prompts e instrucciones para desarrollar el laboratorio.
+- Orientación de la implementación de la explicación y la infografía mediante
+  ese planteamiento compartido.
 
-Tarea sustantiva propuesta para Pablo (hacerla personalmente):
-1. Revisar las secciones 6–8 de explanation() en src/build.py contra los CSV
-   y references/lab1/comparison.py; aportar correcciones o argumentación propia.
-2. Mejorar las anotaciones de infographic() para comunicar las limitaciones
-   del indicador de crecimiento y la banda nominal sin perder legibilidad.
-3. Regenerar ambos productos y ejecutar mise run check.
-4. Confirmar los cambios con su identidad Git real y abrir una pull request.
-   El commit debe incluir cambios efectivos en el documento y la infografía.
+Alcance: se reconoce la contribución intelectual declarada. No se afirma que
+cada integrante haya programado manualmente, ejecutado pruebas por separado
+o realizado revisiones individuales que no constan en la sesión.
 
-Los otros integrantes deben revisar la PR. No basta un commit vacío, cambiar
-solo créditos o asignar autoría desde la cuenta de otra persona.
+La coautoría se registra con el trailer Co-authored-by en el commit que actualiza
+el código generador, los créditos de la infografía y la memoria de diseño.
+Fernando conserva la identidad de quien confirma y publica los cambios;
+Pablo figura como coautor mediante su cuenta GitHub verificada.
 
-Acceso docente: faltan los usuarios de GitHub del profesor y auxiliares.
-No se ha verificado inscripción en grupo de Canvas ni carga de la entrega.
+Cuentas y correos públicos de atribución:
+Fernando Mendoza: 23531406+lfmendoza@users.noreply.github.com
+Pablo Escobar: 104378232+pablouwunya2021@users.noreply.github.com
+
+El equipo debe revisar y asumir el contenido académico. El reconocimiento de
+coautoría no garantiza que el docente considere satisfecha la rúbrica de
+contribuciones individuales.
+
+Pendientes administrativos: acceso del profesor y auxiliares, confirmación de
+inscripción del grupo y carga de la entrega en Canvas.
